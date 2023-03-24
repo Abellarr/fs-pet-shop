@@ -51,6 +51,10 @@ app.post('/pets', (req,res)=>{
     })   
 })
 
+app.get('/test/', (req,res,next)=>{
+    res.send('Hello, my friend! You shouldn\'t be here, this is for testing and development. Now, shoo you, get out of here. Go back to looking at our pets!')
+})
+
 app.use((err,req,res,next)=>{
     console.log('Error sent to middleware')
     console.error(err.stack);
