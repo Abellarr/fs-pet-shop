@@ -138,28 +138,6 @@ app.delete('/pets/:id', (req, res, next)=>{
             }
         })
     }
-
-    // fs.readFile(petsPath, (err,data)=>{                  ***Code from when the DB was in a JSON file***
-    //     if (err){
-    //         return next(err);
-    //     } else {
-    //         let allPets = JSON.parse(data);
-    //         if (!allPets[petId]) {
-    //             console.log('DELETE error, doesn\'t exist');
-    //             return res.status(404).send('Not Found');
-    //         }
-    //         // let deletedPet = allPets[petId];
-    //         allPets.splice(petId, 1);
-    //         fs.writeFile(petsPath, JSON.stringify(allPets), (err)=>{
-    //             if (err) {
-    //                 return next(err);
-    //             } else {
-    //                 res.status(200)
-    //                 res.send(`Pet deleted`);
-    //             }
-    //         })
-    //     }        
-    // })
 })
 
 app.use((err,req,res,next)=>{
